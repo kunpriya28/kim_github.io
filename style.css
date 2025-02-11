@@ -1,0 +1,311 @@
+/* การตั้งค่าพื้นฐาน */
+body {
+    font-family: 'Prompt', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #e3d8f1, #f7f3fc);
+    color: #ce4a95;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #8e24aa;
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: #9f79b7;
+    margin-bottom: 20px;
+}
+
+.feelings {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.feelings h2 {
+    color: #57285a;
+}
+
+.feelings p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ad7ee6;
+}
+
+.gallery {
+    margin-bottom: 30px;
+}
+
+.gallery h2 {
+    color:  #c3287d;
+    margin-bottom: 20px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 รูปต่อแถว */
+    gap: 10px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-grid img:hover {
+    transform: scale(1.05);
+}
+
+.countdown h2 {
+    color: #ab47bc;
+    margin-bottom: 10px;
+}
+
+#countdown {
+    font-size: 1.5rem;
+    color: #d662f7;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.footer {
+    margin-top: 30px;
+    font-size: 1rem;
+    color: #b045d7;
+    background: #d7bcdb;
+    padding: 10px;
+    border-radius: 10px;
+}
+.valentine-moment {
+    background-color: #fce4ec;
+    padding: 20px;
+    margin: 20px auto;
+    border: 2px solid #f8bbd0;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.valentine-moment h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.8rem;
+    color: #d81b60;
+    text-shadow: 2px 2px 10px rgba(255, 182, 193, 0.8);
+}
+
+.valentine-moment p {
+    font-family: 'Prompt', sans-serif;
+    font-size: 1.2rem;
+    color: #880e4f;
+    line-height: 1.8;
+    margin: 10px 0;
+}
+.valentine-images {
+    display: grid;
+    grid-template-columns: 1fr; /* กำหนดให้มี 1 คอลัมน์ */
+    gap: 15px;
+    margin-top: 20px;
+    justify-items: center; /* จัดให้อยู่ตรงกลาง */
+}
+
+.valentine-images img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 4px solid #f06292;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.valentine-images img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+@keyframes floating-hearts {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-300px) scale(0.5);
+        opacity: 0;
+    }
+}
+
+.floating-heart {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #ff6f61;
+    border-radius: 50%;
+    animation: floating-hearts 4s ease-in infinite;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.love-quotes {
+    background-color: #ede7f6;
+    padding: 15px;
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.love-quotes h2 {
+    font-size: 2rem;
+    color: #673ab7;
+    font-family: 'Great Vibes', cursive;
+}
+
+#quote-box {
+    font-family: 'Prompt', sans-serif;
+    font-size: 1.2rem;
+    color: #512da8;
+    margin-top: 10px;
+}
+#countdown {
+    font-size: 2rem;
+    color: purple;
+    animation: pulse 1s infinite alternate;
+}
+@keyframes pulse {
+    from {
+        color: purple;
+    }
+    to {
+        color: magenta;
+    }
+}
+.dark-mode {
+    background: #222;
+    color: #fff;
+}
+
+button {
+    transition: all 0.2s ease-in-out;
+}
+button:hover {
+    transform: scale(1.1);
+}
+button:active {
+    transform: scale(0.9);
+}
+
+.falling-heart {
+    position: fixed;
+    top: -10px;
+    color: pink;
+    font-size: 20px;
+    animation: fall linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+.image-slider {
+    width: 100%;
+    overflow: hidden; /* ซ่อนภาพที่เลื่อนออกจากกรอบ */
+    display: flex;
+    justify-content: center; /* จัดตำแหน่งให้อยู่กลางจอ */
+    align-items: center;
+    position: relative;
+    background: #ffe0f0;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.slider {
+    display: flex;
+    width: 60%; /* กำหนดความกว้างของตัวเลื่อน */
+    animation: slide 20s infinite alternate linear; /* เพิ่มความช้าของการเลื่อน */
+}
+
+.slider img {
+    width: 52%; /* ขนาดของภาพ */
+    margin: 0 10px; /* เพิ่มระยะห่างระหว่างภาพ */
+    transition: transform 0.5s, filter 0.5s;
+    border-radius: 15px;
+}
+
+/* 🎞️ แอนิเมชันให้ภาพเลื่อนไปซ้ายและขวา */
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    25% { transform: translateX(-25%); }
+    50% { transform: translateX(-50%); }
+    75% { transform: translateX(-25%); }
+    100% { transform: translateX(0%); }
+}
+
+.reply-section {
+    background: #ffe0f0;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.reply-section h2 {
+    font-size: 2rem;
+    color: #d81b60;
+}
+
+#kim-message {
+    width: 80%;
+    height: 45px;
+    padding: 10px;
+    border: 2px solid #f06292;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    resize: none;
+}
+
+button {
+    background: linear-gradient(45deg, #ff80ab, #ff4081);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #ff4081, #ff80ab);
+    transform: scale(1.1);
+}
+
+#message-display {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #512da8;
+    font-weight: bold;
+}
